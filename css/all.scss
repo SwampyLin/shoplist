@@ -1,0 +1,104 @@
+$color-black: #444;
+$color-yellow: #ffc954;
+$color-red: #ff3d4a;
+$color-white: #f3f3f3;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-yellow;
+  font-family: 'Roboto', sans-serif, '微軟正黑體';
+}
+
+#buylist {
+  display: inline-block;
+  padding: 20px;
+  border: solid 4px $color-black;
+  background-color: $color-white;
+  box-shadow: unset unset 30px rgba(0, 0, 0, 0.2);
+  .buy-item {
+    padding: 20px;
+    border: solid 3px $color-black;
+    margin-top: 10px;
+    list-style: none;
+    font-weight: 900;
+    input {
+      width: 100px;
+      border: solid 3px $color-black;
+      padding: 2px;
+    }
+  }
+}
+
+#items-list {
+  padding: 5px;
+  margin-top: 10px;
+  position: relative;
+  .buy-item {
+    padding: 5px;
+    list-style: none;
+    border: solid 3px $color-black;
+    margin-top: 10px;
+    font-weight: 900;
+  }
+  .price {
+    display: inline-block;
+    position: absolute;
+    padding-left: 8px;
+    padding-right: 8px;
+    right: 50px;
+    background-color: $color-yellow;
+    &::after {
+      content: ' $';
+    }
+  }
+  .total {
+    background-color: $color-red;
+    color: $color-white;
+    .price {
+      background-color: transparent;
+    }
+  }
+}
+
+//文字
+h1 {
+  padding: 20px;
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  border-bottom: solid 4px $color-black;
+  background-color: $color-red;
+  color: $color-white;
+  font-weight: 400;
+}
+
+//按鈕
+.btn {
+  &-add {
+    margin-left: 10px;
+    padding: 5px;
+    border: solid 3px $color-black;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-red;
+      color: $color-white;
+    }
+  }
+  &-del {
+    display: inline-block;
+    padding: unset 6px;
+    right: 10px;
+    cursor: pointer;
+    position: absolute;
+    &:hover {
+      background-color: $color-red;
+      color: $color-white;
+    }
+  }
+}
